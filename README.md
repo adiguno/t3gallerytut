@@ -4,7 +4,7 @@
 - [ ] Learn NextJS app router
 - [ ] Learn Drizzle ORM
 - [ ] Learn Vercel Postgress
-- [ ] Dabble in Clerk, Sentry, Upstash
+- [ ] Dabble in Clerk, Sentry, Upstash, Uploadthing
 
 # Stack
 
@@ -17,3 +17,9 @@
 - Auth: Clerk
 - Monitoring: Sentry
 - Rate limiting: Upstash
+  ~~- Image hosting: Uploadthing~~
+
+# Notes
+
+- t3 make sure your env vars are required and typesafe
+- putting images in `/public` could cause bandwidth issues (This proj, deoesn't matter)
