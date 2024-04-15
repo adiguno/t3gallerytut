@@ -24,3 +24,7 @@
 - t3 make sure your env vars are required and typesafe
 - putting images in `/public` could cause bandwidth issues (This proj, deoesn't matter)
 - ignore the eslint and typescript checks on builds in `next.config.js`, because we don't want them blocking the builds. We can have a separate GitHub Actions to check them
+- one free database per Vercel account, so share them with your other projects
+  - T3 creates the tables for the same project with the same prefix, e.g. `t3gallery_<table_ name>`
+  - DB name `OneTrueSauce`
+  - make sure Vercel deployments and the database is the same region to reduce slow down
