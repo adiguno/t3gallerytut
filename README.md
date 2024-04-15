@@ -29,3 +29,6 @@
   - DB name `OneTrueSauce`
   - make sure Vercel deployments and the database is the same region to reduce slow down
 - `npm run db:push` to push schema changes to the db
+- `export const dynamic = "force-dynamic";`
+  - make updates in the db show up on the page. Otherwise, it won't update, because the page is cached
+  - well, it wasn't showing stale data on local, lets test prod
