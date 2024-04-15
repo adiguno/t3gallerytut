@@ -1,4 +1,10 @@
-# Create T3 App
+# todo/goals
+
+- [ ] Learn React Server Actions
+- [ ] Learn NextJS app router
+- [ ] Learn Drizzle ORM
+- [ ] Learn Vercel Postgress
+- [ ] Dabble in Clerk, Sentry, Upstash
 
 # Stack
 
@@ -10,3 +16,4 @@
 - Database: Vercel Postgress
 - Auth: Clerk
 - Monitoring: Sentry
+- Rate limiting: Upstash
