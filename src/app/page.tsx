@@ -3,7 +3,7 @@ import Image from "next/image";
 import { db } from "~/server/db";
 
 // make updates in the db show up on the page. Otherwise, it won't update, because the page is cached
-// export const dynamic = "force-dynamic";
+export const dynamic = "force-dynamic";
 
 const images = Array.from(Array(10).keys());
 const imageNames = images.map((number) => number + 1 + ".png");
