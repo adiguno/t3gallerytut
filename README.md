@@ -23,3 +23,4 @@
 
 - t3 make sure your env vars are required and typesafe
 - putting images in `/public` could cause bandwidth issues (This proj, deoesn't matter)
+- ignore the eslint and typescript checks on builds in `next.config.js`, because we don't want them blocking the builds. We can have a separate GitHub Actions to check them
