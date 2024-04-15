@@ -28,3 +28,4 @@
   - T3 creates the tables for the same project with the same prefix, e.g. `t3gallery_<table_ name>`
   - DB name `OneTrueSauce`
   - make sure Vercel deployments and the database is the same region to reduce slow down
+- `npm run db:push` to push schema changes to the db
