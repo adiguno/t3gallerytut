@@ -48,8 +48,15 @@
 - Clerk causes a layout shift in the pre-loading. Which Uploadthing suffers too, but they got a SSR plugin that stops it
 - make sure all the env vars are 'synced' between local and Vercel (by copypasting onto Vercel)
 - Uploadthing server callback was not working because of
+  - nope, I think it's really inconsistent.
+    - working 68laslm79 to confirm issue
+    - cp7hkpd6c confirm fixed issue
+      - working https://t3gallerytut.vercel.app/
+      - not working https://t3gallerytut-cp7hkpd6c-adigunos-projects.vercel.app/
+  - faq says something about preview deployments (the one with the hash?) not working because of the Vercel authentication stuff
 
 ```js
+/core.ts
 const insertedFile = await db.insert(images).values({
   name: file.name,
   url: file.url,
@@ -57,3 +64,5 @@ const insertedFile = await db.insert(images).values({
 });
 console.log("inserted file", insertedFile);
 ```
+
+- Theo organize all his db calls in `server/db/queries.ts`
