@@ -44,3 +44,4 @@
 - Clerk Provider in root layout changed the Chrome 'translate language' to Spanish?
   - I'm not sure what it is ...
 - How do I handle file upload errors with Uploadthing? Like file too big.
+- Drizzle's `db:push` command will truncate the table, if a new non-null field is introduced
