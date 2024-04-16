@@ -1,7 +1,7 @@
-import Link from "next/link";
 import Image from "next/image";
 import { db } from "~/server/db";
-import { asc } from "drizzle-orm";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
+import { Upload } from "./_compnent/upload";
 
 // make updates in the db show up on the page. Otherwise, it won't update, because the page is cached
 export const dynamic = "force-dynamic";
@@ -38,8 +38,16 @@ export default async function HomePage() {
   // console.log(images);
 
   return (
-    <main className="bg-lime-400">
-      <Images />
+    <main className="">
+      <SignedOut>
+        <div>please sign in</div>
+      </SignedOut>
+      <SignedIn>
+        <div className="bg-amber-400">
+          <Upload />
+          <Images />
+        </div>
+      </SignedIn>
     </main>
   );
 }

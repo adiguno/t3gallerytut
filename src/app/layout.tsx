@@ -1,5 +1,5 @@
 import "~/styles/globals.css";
-
+import "@uploadthing/react/styles.css"; // uploadthing's tailwind not currently working
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { TopNav } from "./_compnent/topnav";

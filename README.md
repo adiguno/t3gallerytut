@@ -41,3 +41,6 @@
 - Clerk has a production instance (I'm just using the dev instance for this proj)
   - set it up
   - copy over the prod env vars to Vercel
+- Clerk Provider in root layout changed the Chrome 'translate language' to Spanish?
+  - I'm not sure what it is ...
+- How do I handle file upload errors with Uploadthing? Like file too big.
