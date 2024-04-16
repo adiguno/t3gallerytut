@@ -9,11 +9,29 @@ export const dynamic = "force-dynamic";
 // const images = Array.from(Array(10).keys());
 // const imageNames = images.map((number) => number + 1 + ".png");
 
-// this only runs on the server
-export default async function HomePage() {
+async function Images() {
   const images = await db.query.images.findMany({
     orderBy: (images, { asc }) => [asc(images.id)],
   });
+  return (
+    <div className="container flex flex-wrap gap-4">
+      {images.map((image, idx) => (
+        <div key={idx} className="bg-orange-400">
+          <div key={idx}>
+            <Image width={100} height={100} src={image.url} alt=""></Image>
+            <div>{image.id}</div>
+            <div>{image.name}</div>
+            <div>{image.createdAt.toDateString()}</div>
+            <div>{image.updatedAt?.toDateString()}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// this only runs on the server
+export default async function HomePage() {
   // images.map((image) => {
   //   console.log(image.url);
   // });
@@ -21,19 +39,7 @@ export default async function HomePage() {
 
   return (
     <main className="bg-lime-400">
-      <div className="container flex flex-wrap gap-4">
-        {images.map((image, idx) => (
-          <div key={idx} className="bg-orange-400">
-            <div key={idx}>
-              <Image width={100} height={100} src={image.url} alt=""></Image>
-              <div>{image.id}</div>
-              <div>{image.name}</div>
-              <div>{image.createdAt.toDateString()}</div>
-              <div>{image.updatedAt?.toDateString()}</div>
-            </div>
-          </div>
-        ))}
-      </div>
+      <Images />
     </main>
   );
 }
