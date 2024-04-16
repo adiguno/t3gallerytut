@@ -5,37 +5,31 @@ import { db } from "~/server/db";
 // make updates in the db show up on the page. Otherwise, it won't update, because the page is cached
 export const dynamic = "force-dynamic";
 
-const images = Array.from(Array(10).keys());
-const imageNames = images.map((number) => number + 1 + ".png");
+// const images = Array.from(Array(10).keys());
+// const imageNames = images.map((number) => number + 1 + ".png");
 
 // this only runs on the server
 export default async function HomePage() {
-  const posts = await db.query.posts.findMany();
-  console.log(posts);
+  const images = await db.query.images.findMany();
+  // images.map((image) => {
+  //   console.log(image.url);
+  // });
+  // console.log(images);
 
   return (
     <main className="bg-lime-400">
       <div className="container flex flex-wrap gap-4">
-        {posts.map((post, idx) => (
+        {images.map((image, idx) => (
           <div key={idx} className="bg-orange-400">
-            <div>{post.id}</div>
-            <div>{post.name}</div>
-            <div>{post.createdAt.toDateString()}</div>
-            <div>{post.updatedAt?.toDateString()}</div>
+            <div key={idx}>
+              <Image width={100} height={100} src={image.url} alt=""></Image>
+              <div>{image.id}</div>
+              <div>{image.name}</div>
+              <div>{image.createdAt.toDateString()}</div>
+              <div>{image.updatedAt?.toDateString()}</div>
+            </div>
           </div>
         ))}
-        {[...imageNames, ...imageNames, ...imageNames].map(
-          (imageName, index) => (
-            <div key={index}>
-              <Image
-                width={100}
-                height={100}
-                src={`/${imageName}`}
-                alt=""
-              ></Image>
-            </div>
-          ),
-        )}
       </div>
     </main>
   );

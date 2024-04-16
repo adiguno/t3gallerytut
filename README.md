@@ -32,3 +32,6 @@
 - `export const dynamic = "force-dynamic";`
   - make updates in the db show up on the page. Otherwise, it won't update, because the page is cached
   - well, it wasn't showing stale data on local, lets test prod. Yup, prod didn't update
+- when drizzle studio fails to create a new record (null value for a not null field), the auto generated `id` increments still
+  - 1 - good, 2 - bad, 3 - current id
+- NextJS `<Image> src` can't do external site's images unless specified in `next.config.js`
