@@ -17,7 +17,7 @@
 - Auth: Clerk (beta)
 - Monitoring: Sentry
 - Rate limiting: Upstash
-  ~~- Image hosting: Uploadthing~~
+- Image hosting: Uploadthing
 
 # Notes
 
