@@ -47,3 +47,13 @@
 - Drizzle's `db:push` command will truncate the table, if a new non-null field is introduced
 - Clerk causes a layout shift in the pre-loading. Which Uploadthing suffers too, but they got a SSR plugin that stops it
 - make sure all the env vars are 'synced' between local and Vercel (by copypasting onto Vercel)
+- Uploadthing server callback was not working because of
+
+```js
+const insertedFile = await db.insert(images).values({
+  name: file.name,
+  url: file.url,
+  userId: metadata.userId,
+});
+console.log("inserted file", insertedFile);
+```
