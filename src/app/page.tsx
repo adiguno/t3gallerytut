@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { db } from "~/server/db";
+import { asc } from "drizzle-orm";
 
 // make updates in the db show up on the page. Otherwise, it won't update, because the page is cached
 export const dynamic = "force-dynamic";
@@ -10,7 +11,9 @@ export const dynamic = "force-dynamic";
 
 // this only runs on the server
 export default async function HomePage() {
-  const images = await db.query.images.findMany();
+  const images = await db.query.images.findMany({
+    orderBy: (images, { asc }) => [asc(images.id)],
+  });
   // images.map((image) => {
   //   console.log(image.url);
   // });
