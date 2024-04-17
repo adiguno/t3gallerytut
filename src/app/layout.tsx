@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { TopNav } from "./_compnent/topnav";
 import { Toaster } from "~/components/ui/sonner";
+import { CSPostHogProvider } from "./_analytics/provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,15 +24,17 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body
-          className={`font-sans ${inter.variable} dark flex flex-col gap-4`}
-        >
-          <TopNav />
-          <main>{children}</main>
-          <Toaster />
-        </body>
-      </html>
+      <CSPostHogProvider>
+        <html lang="en">
+          <body
+            className={`font-sans ${inter.variable} dark flex flex-col gap-4`}
+          >
+            <TopNav />
+            <main>{children}</main>
+            <Toaster />
+          </body>
+        </html>
+      </CSPostHogProvider>
     </ClerkProvider>
   );
 }

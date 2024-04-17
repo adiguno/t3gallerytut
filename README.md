@@ -81,3 +81,163 @@ console.log("inserted file", insertedFile);
 - ShadCN, make sure the body has a class name of `dark` to apply the dark theme in `global.css`
 - PostHog, great for user behavior analytics
 - Plausible, great for general traffic (not-logged-in users)
+
+# PostHog Error
+
+```bash
+✓ Compiled /src/middleware in 4.5s (1850 modules)
+ ⨯ TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_1__.createContext) is not a function
+    at __webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at eval (./src/app/layout.tsx:24:74)
+    at (rsc)/./src/app/layout.tsx (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/app/_not-found/page.js:297:1)
+    at Function.__webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+digest: "4169096601"
+ ⨯ TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_1__.createContext) is not a function
+    at __webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at eval (./src/app/layout.tsx:24:74)
+    at (rsc)/./src/app/layout.tsx (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/app/_not-found/page.js:297:1)
+    at Function.__webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+digest: "4169096601"
+ ⨯ TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_1__.createContext) is not a function
+    at __webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at eval (./src/app/layout.tsx:24:74)
+    at (rsc)/./src/app/layout.tsx (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/app/_not-found/page.js:297:1)
+    at Function.__webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+digest: "849605051"
+TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_1__.createContext) is not a function
+    at eval (webpack-internal:///(rsc)/./node_modules/posthog-js/react/dist/esm/index.js:18:74)
+    at (rsc)/./node_modules/posthog-js/react/dist/esm/index.js (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/vendor-chunks/posthog-js.js:30:1)
+    at __webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/app/layout.tsx:24:74)
+    at (rsc)/./src/app/layout.tsx (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/app/_not-found/page.js:297:1)
+    at Function.__webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at async e9 (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:396669)
+    at async tv (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:400177)
+    at async tb (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:400770)
+    at async tj (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:36:2130)
+    at async /Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:36:2722 {
+  digest: '849605051'
+}
+ ⨯ TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_1__.createContext) is not a function
+    at eval (webpack-internal:///(rsc)/./node_modules/posthog-js/react/dist/esm/index.js:18:74)
+    at (rsc)/./node_modules/posthog-js/react/dist/esm/index.js (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/vendor-chunks/posthog-js.js:30:1)
+    at __webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/app/layout.tsx:24:74)
+    at (rsc)/./src/app/layout.tsx (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/app/_not-found/page.js:297:1)
+    at Function.__webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at async e9 (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:396669)
+    at async tv (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:400177)
+    at async tb (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:400770)
+    at async tj (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:36:2130)
+    at async /Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:36:2722 {
+  digest: '849605051'
+}
+ ✓ Compiled in 330ms (595 modules)
+ ○ Compiling /_error ...
+ ✓ Compiled / in 1491ms (1942 modules)
+ ✓ Compiled in 655ms (1037 modules)
+ GET /_next/static/webpack/950b1349f2c4d605.webpack.hot-update.json 500 in 7713ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET / 200 in 2408ms
+ GET / 200 in 1611ms
+ ⨯ TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_1__.createContext) is not a function
+    at __webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at eval (./src/app/layout.tsx:24:74)
+    at (rsc)/./src/app/layout.tsx (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/app/page.js:308:1)
+    at Function.__webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+digest: "1756980576"
+ ⨯ TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_1__.createContext) is not a function
+    at __webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at eval (./src/app/layout.tsx:24:74)
+    at (rsc)/./src/app/layout.tsx (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/app/page.js:308:1)
+    at Function.__webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+digest: "1756980576"
+ ⨯ TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_1__.createContext) is not a function
+    at __webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at eval (./src/app/layout.tsx:24:74)
+    at (rsc)/./src/app/layout.tsx (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/app/page.js:308:1)
+    at Function.__webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+digest: "1358897995"
+TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_1__.createContext) is not a function
+    at eval (webpack-internal:///(rsc)/./node_modules/posthog-js/react/dist/esm/index.js:18:74)
+    at (rsc)/./node_modules/posthog-js/react/dist/esm/index.js (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/vendor-chunks/posthog-js.js:30:1)
+    at __webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/app/layout.tsx:24:74)
+    at (rsc)/./src/app/layout.tsx (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/app/page.js:308:1)
+    at Function.__webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at async e5 (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:396512)
+    at async tv (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:400209)
+    at async tb (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:400770)
+    at async tj (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:36:2130)
+    at async /Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:36:2722 {
+  digest: '1358897995'
+}
+ ⨯ TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_1__.createContext) is not a function
+    at eval (webpack-internal:///(rsc)/./node_modules/posthog-js/react/dist/esm/index.js:18:74)
+    at (rsc)/./node_modules/posthog-js/react/dist/esm/index.js (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/vendor-chunks/posthog-js.js:30:1)
+    at __webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/app/layout.tsx:24:74)
+    at (rsc)/./src/app/layout.tsx (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/app/page.js:308:1)
+    at Function.__webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at async e5 (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:396512)
+    at async tv (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:400209)
+    at async tb (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:400770)
+    at async tj (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:36:2130)
+    at async /Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:36:2722 {
+  digest: '1358897995',
+  page: '/'
+}
+ ⨯ TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_1__.createContext) is not a function
+    at __webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at eval (./src/app/layout.tsx:24:74)
+    at (rsc)/./src/app/layout.tsx (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/app/page.js:308:1)
+    at Function.__webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+digest: "1756980576"
+ ⨯ TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_1__.createContext) is not a function
+    at __webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at eval (./src/app/layout.tsx:24:74)
+    at (rsc)/./src/app/layout.tsx (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/app/page.js:308:1)
+    at Function.__webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+digest: "1756980576"
+ ⨯ TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_1__.createContext) is not a function
+    at __webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at eval (./src/app/layout.tsx:24:74)
+    at (rsc)/./src/app/layout.tsx (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/app/page.js:308:1)
+    at Function.__webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+digest: "1358897995"
+TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_1__.createContext) is not a function
+    at eval (webpack-internal:///(rsc)/./node_modules/posthog-js/react/dist/esm/index.js:18:74)
+    at (rsc)/./node_modules/posthog-js/react/dist/esm/index.js (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/vendor-chunks/posthog-js.js:30:1)
+    at __webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/app/layout.tsx:24:74)
+    at (rsc)/./src/app/layout.tsx (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/app/page.js:308:1)
+    at Function.__webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at async e5 (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:396512)
+    at async tv (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:400209)
+    at async tb (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:400770)
+    at async tj (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:36:2130)
+    at async /Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:36:2722 {
+  digest: '1358897995'
+}
+ ⨯ TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_1__.createContext) is not a function
+    at eval (webpack-internal:///(rsc)/./node_modules/posthog-js/react/dist/esm/index.js:18:74)
+    at (rsc)/./node_modules/posthog-js/react/dist/esm/index.js (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/vendor-chunks/posthog-js.js:30:1)
+    at __webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/app/layout.tsx:24:74)
+    at (rsc)/./src/app/layout.tsx (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/app/page.js:308:1)
+    at Function.__webpack_require__ (/Users/dian/Documents/prototype_nextjs/t3gallery/.next/server/webpack-runtime.js:33:43)
+    at async e5 (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:396512)
+    at async tv (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:400209)
+    at async tb (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:400770)
+    at async tj (/Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:36:2130)
+    at async /Users/dian/Documents/prototype_nextjs/t3gallery/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:36:2722 {
+  digest: '1358897995',
+  page: '/'
+}
+ GET / 500 in 363ms
+ GET / 500 in 31ms
+
+```
+
+- try 1 `npm update react react-dom`
+- nvm, wrong import in `layour.tsx`: `PostHogProvider` used, instead of `CSPostHogProvider`
