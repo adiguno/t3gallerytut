@@ -28,8 +28,7 @@ export default function RootLayout({
           className={`font-sans ${inter.variable} dark flex flex-col gap-4`}
         >
           <TopNav />
-
-          {children}
+          <main>{children}</main>
           <Toaster />
         </body>
       </html>
