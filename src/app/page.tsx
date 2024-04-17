@@ -14,13 +14,21 @@ async function Images() {
   const images = await getMyImages();
 
   return (
-    <div className="container flex flex-wrap gap-4">
+    <div className="flex w-full flex-wrap justify-center gap-4 bg-yellow-400">
       {images.map((image, idx) => (
         <div key={idx} className="bg-orange-400">
-          <div key={idx}>
-            <Image width={100} height={100} src={image.url} alt=""></Image>
-            <div>{image.id}</div>
-            <div>{image.name}</div>
+          <div key={idx} className="flex flex-col items-center ">
+            <Image
+              width={100}
+              height={100}
+              src={image.url}
+              alt={image.name}
+              // fill
+            ></Image>
+            <div className="flex gap-2">
+              <div>{image.id}</div>
+              <div>{image.name}</div>
+            </div>
             <div>{image.createdAt.toDateString()}</div>
             <div>{image.updatedAt?.toDateString()}</div>
           </div>
