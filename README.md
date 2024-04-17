@@ -48,6 +48,29 @@
 - Drizzle's `db:push` command will truncate the table, if a new non-null field is introduced
 - Clerk causes a layout shift in the pre-loading. Which Uploadthing suffers too, but they got a SSR plugin that stops it
 - make sure all the env vars are 'synced' between local and Vercel (by copypasting onto Vercel)
+
+- Theo organize all his db calls in `server/db/queries.ts`
+  - to maintain the data access layer, keeping it 'secure' (in one place)
+  - he puts the auth (to get user id) in the same place, I'm not too sure on that. But fine for now
+  - also weird that you need another dependency `server-only` to make this query to only run on the server. ?
+- Vercel `<Image>` component only shows the image with the minimum resolution needed. (small screen = small image) Automatically.
+- Sentry setup wizard `npx @sentry/wizard@latest -i nextjs`
+- Sentry example page `/sentry-example-page`
+- Sentry env var is generated, save it somewhere safe
+- example Sentry error using Turbo is not right: `TypeError ../../sentry/scripts/views.js in poll`
+  - using no turbo, webpack?, created the correct exmaple error
+- NextJS parallel routing (same page, different route). Instagram
+- CSS, Theo put the top nav and the body into one grid div, `auto, 1fr`. Not exactly show what situation he was envisioning.
+- ShadCN, make sure the body has a class name of `dark` to apply the dark theme in `global.css`
+- PostHog, great for user behavior analytics
+- Plausible, great for general traffic (not-logged-in users)
+
+## Questions
+
+- How do you treat different errors with different status codes? no auth, no permission, etc?
+
+# UploadThing Issue
+
 - Uploadthing server callback was not working because of
   - nope, I think it's really inconsistent.
     - working 68laslm79 to confirm issue
@@ -65,22 +88,6 @@ const insertedFile = await db.insert(images).values({
 });
 console.log("inserted file", insertedFile);
 ```
-
-- Theo organize all his db calls in `server/db/queries.ts`
-  - to maintain the data access layer, keeping it 'secure' (in one place)
-  - he puts the auth (to get user id) in the same place, I'm not too sure on that. But fine for now
-  - also weird that you need another dependency `server-only` to make this query to only run on the server. ?
-- Vercel `<Image>` component only shows the image with the minimum resolution needed. (small screen = small image) Automatically.
-- Sentry setup wizard `npx @sentry/wizard@latest -i nextjs`
-- Sentry example page `/sentry-example-page`
-- Sentry env var is generated, save it somewhere safe
-- example Sentry error using Turbo is not right: `TypeError ../../sentry/scripts/views.js in poll`
-  - using no turbo, webpack?, created the correct exmaple error
-- NextJS parallel routing (same page, different route). Instagram
-- CSS, Theo put the top nav and the body into one grid div, `auto, 1fr`. Not exactly show what situation he was envisioning.
-- ShadCN, make sure the body has a class name of `dark` to apply the dark theme in `global.css`
-- PostHog, great for user behavior analytics
-- Plausible, great for general traffic (not-logged-in users)
 
 # Classname Error
 
