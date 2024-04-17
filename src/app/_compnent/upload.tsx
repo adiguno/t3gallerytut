@@ -49,6 +49,11 @@ export function Upload() {
         toast("Upload Complete!");
         router.refresh();
       }}
+      onUploadError={(error) => {
+        toast.dismiss("upload-begin");
+        posthog.capture("upload_error", { error });
+        toast("Upload Failed!");
+      }}
     />
   );
 }
