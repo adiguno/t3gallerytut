@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { usePostHog } from "posthog-js/react";
 import { UploadButton } from "../utils/uploadthing";
 import { toast } from "sonner";
 
@@ -25,10 +26,13 @@ function Spinner() {
 
 export function Upload() {
   const router = useRouter();
+  const posthog = usePostHog();
+
   return (
     <UploadButton
       endpoint="imageUploader"
-      onUploadBegin={() =>
+      onUploadBegin={() => {
+        posthog.capture("upload-begin");
         toast(
           <div className="flex gap-4">
             <Spinner />
@@ -38,8 +42,8 @@ export function Upload() {
             duration: 100000,
             id: "upload-begin",
           },
-        )
-      }
+        );
+      }}
       onClientUploadComplete={() => {
         toast.dismiss("upload-begin");
         toast("Upload Complete!");
