@@ -1,8 +1,9 @@
 import "~/styles/globals.css";
-import "@uploadthing/react/styles.css"; // uploadthing's tailwind not currently working
+import "@uploadthing/react/styles.css"; // uploadthing's tailwind not currently working, it needs this styles import
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { TopNav } from "./_compnent/topnav";
+import { Toaster } from "~/components/ui/sonner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,7 +28,9 @@ export default function RootLayout({
           className={`font-sans ${inter.variable} dark flex flex-col gap-4`}
         >
           <TopNav />
+
           {children}
+          <Toaster />
         </body>
       </html>
     </ClerkProvider>
