@@ -2,7 +2,9 @@ import Image from "next/image";
 import { db } from "~/server/db";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { Upload } from "./_compnent/upload";
-import { getMyImages } from "~/server/queries";
+import { deleteImage, getMyImages } from "~/server/queries";
+import { Button } from "~/components/ui/button";
+import { redirect } from "next/navigation";
 
 // make updates in the db show up on the page. Otherwise, it won't update, because the page is cached
 export const dynamic = "force-dynamic";
@@ -31,6 +33,17 @@ async function Images() {
             </div>
             <div>{image.createdAt.toDateString()}</div>
             <div>{image.updatedAt?.toDateString()}</div>
+            <form
+              action={async () => {
+                "use server";
+                await deleteImage(Number(image.id));
+                redirect("/");
+              }}
+            >
+              <Button type="submit" variant="destructive">
+                Delete
+              </Button>
+            </form>
           </div>
         </div>
       ))}
