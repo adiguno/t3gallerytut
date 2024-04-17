@@ -73,3 +73,5 @@ console.log("inserted file", insertedFile);
 - Sentry setup wizard `npx @sentry/wizard@latest -i nextjs`
 - Sentry example page `/sentry-example-page`
 - Sentry env var is generated, save it somewhere safe
+- example Sentry error using Turbo is not right: `TypeError ../../sentry/scripts/views.js in poll`
+  - using no turbo, webpack?, created the correct exmaple error

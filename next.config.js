@@ -5,7 +5,7 @@
 await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
-const config = {
+const coreConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -23,15 +23,10 @@ const config = {
   },
 };
 
-export default config;
+import { withSentryConfig } from "@sentry/nextjs";
 
-
-// Injected content via Sentry wizard below
-
-const { withSentryConfig } = require("@sentry/nextjs");
-
-module.exports = withSentryConfig(
-  module.exports,
+const config = withSentryConfig(
+  coreConfig,
   {
     // For all available options, see:
     // https://github.com/getsentry/sentry-webpack-plugin#options
@@ -68,5 +63,7 @@ module.exports = withSentryConfig(
     // https://docs.sentry.io/product/crons/
     // https://vercel.com/docs/cron-jobs
     automaticVercelMonitors: true,
-  }
+  },
 );
+
+export default config;
