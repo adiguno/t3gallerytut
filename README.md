@@ -76,3 +76,4 @@ console.log("inserted file", insertedFile);
 - example Sentry error using Turbo is not right: `TypeError ../../sentry/scripts/views.js in poll`
   - using no turbo, webpack?, created the correct exmaple error
 - NextJS parallel routing (same page, different route). Instagram
+- CSS, Theo put the top nav and the body into one grid div, `auto, 1fr`. Not exactly show what situation he was envisioning.
