@@ -51,7 +51,7 @@ export default async function HomePage() {
         <div>please sign in</div>
       </SignedOut>
       <SignedIn>
-        <div className="bg-amber-400">
+        <div className="flex flex-col items-center gap-4 bg-amber-400 p-4">
           <Upload />
           <Images />
         </div>
