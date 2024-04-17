@@ -16,6 +16,7 @@
 - Database: Vercel Postgress
 - Auth: Clerk (beta)
 - Monitoring: Sentry
+- Analytics: PostHog
 - Rate limiting: Upstash
 - Image hosting: Uploadthing
 
@@ -78,3 +79,5 @@ console.log("inserted file", insertedFile);
 - NextJS parallel routing (same page, different route). Instagram
 - CSS, Theo put the top nav and the body into one grid div, `auto, 1fr`. Not exactly show what situation he was envisioning.
 - ShadCN, make sure the body has a class name of `dark` to apply the dark theme in `global.css`
+- PostHog, great for user behavior analytics
+- Plausible, great for general traffic (not-logged-in users)
