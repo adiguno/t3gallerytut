@@ -66,3 +66,6 @@ console.log("inserted file", insertedFile);
 ```
 
 - Theo organize all his db calls in `server/db/queries.ts`
+  - to maintain the data access layer, keeping it 'secure' (in one place)
+  - he puts the auth (to get user id) in the same place, I'm not too sure on that. But fine for now
+  - also weird that you need another dependency `server-only` to make this query to only run on the server. ?

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { db } from "~/server/db";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { Upload } from "./_compnent/upload";
+import { getMyImages } from "~/server/queries";
 
 // make updates in the db show up on the page. Otherwise, it won't update, because the page is cached
 export const dynamic = "force-dynamic";
@@ -10,9 +11,8 @@ export const dynamic = "force-dynamic";
 // const imageNames = images.map((number) => number + 1 + ".png");
 
 async function Images() {
-  const images = await db.query.images.findMany({
-    orderBy: (images, { asc }) => [asc(images.id)],
-  });
+  const images = await getMyImages();
+
   return (
     <div className="container flex flex-wrap gap-4">
       {images.map((image, idx) => (
