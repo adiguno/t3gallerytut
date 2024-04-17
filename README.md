@@ -75,3 +75,4 @@ console.log("inserted file", insertedFile);
 - Sentry env var is generated, save it somewhere safe
 - example Sentry error using Turbo is not right: `TypeError ../../sentry/scripts/views.js in poll`
   - using no turbo, webpack?, created the correct exmaple error
+- NextJS parallel routing (same page, different route). Instagram
