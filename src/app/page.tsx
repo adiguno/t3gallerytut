@@ -5,6 +5,8 @@ import { Upload } from "./_compnent/upload";
 import { deleteImage, getMyImages } from "~/server/queries";
 import { Button } from "~/components/ui/button";
 import { redirect } from "next/navigation";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 // make updates in the db show up on the page. Otherwise, it won't update, because the page is cached
 export const dynamic = "force-dynamic";
@@ -65,8 +67,11 @@ export default async function HomePage() {
       </SignedOut>
       <SignedIn>
         <div className="flex flex-col items-center gap-4 bg-amber-400 p-4">
-          <Upload />
-          <Images />
+          {/* <Upload /> */}
+          {/* <Suspense fallback="loading..."> */}
+          <Suspense fallback={<Loading></Loading>}>
+            <Images />
+          </Suspense>
         </div>
       </SignedIn>
     </main>

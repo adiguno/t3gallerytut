@@ -91,6 +91,8 @@ console.log("inserted file", insertedFile);
 
 # Classname Error
 
+- caused by incorrect tags
+
 ```zsh
 app-index.js:33 Warning: Prop `className` did not match. Server: "font-sans __variable_aaf875 dark flex flex-col gap-4 vsc-initialized" Client: "font-sans __variable_aaf875 dark flex flex-col gap-4"
     at body
