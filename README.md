@@ -5,6 +5,8 @@
 - [ ] Learn Drizzle ORM
 - [ ] Learn Vercel Postgress
 - [ ] Dabble in Clerk, Sentry, Upstash, Uploadthing
+-
+- [x] remove posthog tracking from prod
 
 # Stack
 
